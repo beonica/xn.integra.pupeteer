@@ -1,0 +1,24 @@
+{
+  "name": "xn.integra.puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "init.js",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "puppeteer": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beonica/xn.integra.puppeteer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beonica/xn.integra.puppeteer/issues"
+  },
+  "homepage": "https://github.com/beonica/xn.integra.puppeteer#readme"
+}
