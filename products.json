@@ -278,12 +278,7 @@
     "https://loja.imaginarium.com.br/print-satin-piu-no-gato-11793/p",
     "https://loja.imaginarium.com.br/growler-cerveja-pra-degustar-a-vida/p",
     "https://loja.imaginarium.com.br/armario-clock---losangulo-10791/p",
-
-    /* 280 */
-    {
-        "_id" : ObjectId("59f277cf7c23ad8e45035090"),
-        "url" : "http://loja.imaginarium.com.br/chaveiro-led-gato/p"
-    }
+"http://loja.imaginarium.com.br/chaveiro-led-gato/p",
     "https://loja.imaginarium.com.br/casa-de-mdf-coruja-11677/p",
     "https://loja.imaginarium.com.br/banco-redondo-spice-11918/p",
     "https://loja.imaginarium.com.br/luminaria-aracneo-11877/p",
@@ -427,12 +422,7 @@
     "https://loja.imaginarium.com.br/anel-pedras-marinho-18/p",
     "https://loja.imaginarium.com.br/armario-para-discos-vinil-10796/p",
     "https://loja.imaginarium.com.br/vaso-caneca-pote-pontos-poas/p",
-
-    /* 424 */
-    {
-        "_id" : ObjectId("59f2b2387c23ad8e450576a5"),
-        "url" : "http://loja.imaginarium.com.br/cervejeira-sub-zero-lar-melhor-bar-220v/p"
-    }
+"http://loja.imaginarium.com.br/cervejeira-sub-zero-lar-melhor-bar-220v/p",
     "https://loja.imaginarium.com.br/strawberry-juice-11075/p",
     "https://loja.imaginarium.com.br/cartao-aniversario-dia-incrivel/p",
     "https://loja.imaginarium.com.br/unicosmos-11288/p",
@@ -714,21 +704,11 @@
     "https://loja.imaginarium.com.br/papel-de-parede-25m2-garden-10276/p",
     "https://loja.imaginarium.com.br/print-satin-rosa-antique-11731/p",
     "https://loja.imaginarium.com.br/print-sorry-i-was-hungry-10520/p",
-
-    /* 706 */
-    {
-        "_id" : ObjectId("59f3a2197c23ad8e450d4983"),
-        "url" : "http://loja.imaginarium.com.br/banqueta-redonda---laranja-10802/p"
-    }
+    "http://loja.imaginarium.com.br/banqueta-redonda---laranja-10802/p",
     "https://loja.imaginarium.com.br/dias-melhores-11444/p",
     "https://loja.imaginarium.com.br/american-old-style-11119/p",
     "https://loja.imaginarium.com.br/anel-geometrico-madeira-e-cobre-tam-19/p",
-
-    /* 710 */
-    {
-        "_id" : ObjectId("59f3aada7c23ad8e450d8b40"),
-        "url" : "http://loja.imaginarium.com.br/mesa-lateral-p---amarelo-10794/p"
-    }
+    "http://loja.imaginarium.com.br/mesa-lateral-p---amarelo-10794/p",
     "https://loja.imaginarium.com.br/print-satin-movie-11746/p",
     "https://loja.imaginarium.com.br/criado-mudo-quadrado-com-fundo---fitas-k7-pop-10808/p",
     "https://loja.imaginarium.com.br/armario-horizontal-com-2-gavetas---nicho---london-10674/p",
@@ -799,12 +779,7 @@
     "https://loja.imaginarium.com.br/carrinho-office-p---branco-e-cinza-11919/p",
     "https://loja.imaginarium.com.br/olhinho-amarelo-11409/p",
     "https://loja.imaginarium.com.br/print-campo-futebol-10656/p",
-
-    /* 781 */
-    {
-        "_id" : ObjectId("59f43ed47c23ad8e4510ae19"),
-        "url" : "http://loja.imaginarium.com.br/mesa-de-centro-10588/p"
-    }
+    "http://loja.imaginarium.com.br/mesa-de-centro-10588/p",
     "https://loja.imaginarium.com.br/paisagem-11174/p",
     "https://loja.imaginarium.com.br/puff-oval---vermelho-10780/p",
     "https://loja.imaginarium.com.br/cabeca-de-alce-cubo-10467/p",
@@ -824,12 +799,7 @@
     "https://loja.imaginarium.com.br/colar-longo-camurca/p",
     "https://loja.imaginarium.com.br/armario-2-portas---losangulos-10671/p",
     "https://loja.imaginarium.com.br/puff-retangular---quadra-color-10728/p",
-
-    /* 801 */
-    {
-        "_id" : ObjectId("59f463f77c23ad8e451141cb"),
-        "url" : "http://loja.imaginarium.com.br/puff-retangular---preto-10493/p"
-    }
+    "http://loja.imaginarium.com.br/puff-retangular---preto-10493/p",
     "https://loja.imaginarium.com.br/puff-redondo---verde-10527/p",
     "https://loja.imaginarium.com.br/print-macaco-surdo-10403/p",
     "https://loja.imaginarium.com.br/armario-tv-10506/p",
@@ -839,12 +809,7 @@
     "https://loja.imaginarium.com.br/bons-drinks-11261/p",
     "https://loja.imaginarium.com.br/print-satin-namaste-11702/p",
     "https://loja.imaginarium.com.br/adesivo-cabeceira-tabuas-pretas-11713/p",
-
-    /* 811 */
-    {
-        "_id" : ObjectId("59f468877c23ad8e451157ed"),
-        "url" : "http://loja.imaginarium.com.br/armario-1-porta-rustika---tipo-exportacao-10807/p"
-    }
+    "http://loja.imaginarium.com.br/armario-1-porta-rustika---tipo-exportacao-10807/p",
     "https://loja.imaginarium.com.br/puff-retangular---amarelo-10795/p",
     "https://loja.imaginarium.com.br/leaozinho-tribal-11416/p",
     "https://loja.imaginarium.com.br/gaveteiro-horizontal-aparador---quadriculado-10789/p",
@@ -966,12 +931,7 @@
     "https://loja.imaginarium.com.br/anel-navete-agua-18/p",
     "https://loja.imaginarium.com.br/caveira-organizador-g-skull-11705/p",
     "https://loja.imaginarium.com.br/print-satin-fritas-11635/p",
-
-    /* 933 */
-    {
-        "_id" : ObjectId("59f4c2e97c23ad8e4513eb27"),
-        "url" : "http://loja.imaginarium.com.br/print-satin-open-11685/p"
-    }
+    "http://loja.imaginarium.com.br/print-satin-open-11685/p",
     "https://loja.imaginarium.com.br/print-satin-travel-11625/p",
     "https://loja.imaginarium.com.br/print-beer-10311/p",
     "https://loja.imaginarium.com.br/estante-vertical---45-cm---verde-10630/p",
@@ -1057,12 +1017,7 @@
     "https://loja.imaginarium.com.br/print-satin-melancia-11652/p",
     "https://loja.imaginarium.com.br/puff-redondo-grande-11931/p",
     "https://loja.imaginarium.com.br/pequenos-adesivos-coracoes-rosa-pastel-10357/p",
-
-    /* 1019 */
-    {
-        "_id" : ObjectId("59f532bd7c23ad8e45176b7a"),
-        "url" : "http://loja.imaginarium.com.br/adesivo-dots-cinza-pastel-11706/p"
-    }
+"http://loja.imaginarium.com.br/adesivo-dots-cinza-pastel-11706/p",
     "https://loja.imaginarium.com.br/estante-hotizontal-vazado-10494/p",
     "https://loja.imaginarium.com.br/hex-gray-10394/p",
     "https://loja.imaginarium.com.br/hex-red-10339/p",
@@ -1071,23 +1026,13 @@
     "https://loja.imaginarium.com.br/olha-a-onda-olha-a-onda-11278/p",
     "https://loja.imaginarium.com.br/estante-vertical-vazado-10767/p",
     "https://loja.imaginarium.com.br/gaveteiro-aparador---branco-10806/p",
-
-    /* 1028 */
-    {
-        "_id" : ObjectId("59f5569f7c23ad8e45183ee8"),
-        "url" : "http://loja.imaginarium.com.br/print-satin-peixe-laranja-11747/p"
-    }
+    "http://loja.imaginarium.com.br/print-satin-peixe-laranja-11747/p",
     "https://loja.imaginarium.com.br/love-10865/p",
     "https://loja.imaginarium.com.br/pequenas-coisas-11446/p",
     "https://loja.imaginarium.com.br/oi-te-amo-10894/p",
     "https://loja.imaginarium.com.br/print-big-ben-10580/p",
     "https://loja.imaginarium.com.br/dias-verao-10900/p",
-
-    /* 1034 */
-    {
-        "_id" : ObjectId("59f583de7c23ad8e4518df6a"),
-        "url" : "http://loja.imaginarium.com.br/caixote-organizador-grande-container-cinza-10331/p"
-    }
+    "http://loja.imaginarium.com.br/caixote-organizador-grande-container-cinza-10331/p",
     "https://loja.imaginarium.com.br/signo-de-virgem-11083/p",
     "https://loja.imaginarium.com.br/cafe-forte-10862/p",
     "https://loja.imaginarium.com.br/puff-retangular---rosa-pink-10476/p",
@@ -1191,12 +1136,7 @@
     "https://loja.imaginarium.com.br/mesa-bistro---quadriculado-10541/p",
     "https://loja.imaginarium.com.br/adesivo-beautiful-ride-10701/p",
     "https://loja.imaginarium.com.br/namorar-like-10877/p",
-
-    /* 1138 */
-    {
-        "_id" : ObjectId("59f7c3f17c23ad8e452b37ce"),
-        "url" : "http://loja.imaginarium.com.br/armario-1-porta---geometrico-black-10538/p"
-    }
+    "http://loja.imaginarium.com.br/armario-1-porta---geometrico-black-10538/p",
     "https://loja.imaginarium.com.br/estante-vertical-90-cm-vazada---amarelo-10805/p",
     "https://loja.imaginarium.com.br/gaveteiro-1-gaveta---linha-home---losangulo-color-10628/p",
     "https://loja.imaginarium.com.br/bandeja-g-para-frios---com-vidro---vintage-10736/p",
