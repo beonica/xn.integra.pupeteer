@@ -15,6 +15,8 @@ const init = async () => {
 
         if(!visited){
             maxTimeoutsCounter++;
+        }else{
+            maxTimeoutsCounter = 0;
         }
 
         if(maxTimeoutsCounter > maxTimeouts){
