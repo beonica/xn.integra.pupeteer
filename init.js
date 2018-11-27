@@ -3,18 +3,28 @@ require('dotenv').config();
 const sleep = require('util').promisify(setTimeout);
 const functions = require("./functions.js");
 
-const products = require(`./lists/${process.env.LIST}.json`);
+const source = require(`./lists/${process.env.LIST}.json`);
 const sleepTime = process.env.SLEEP_TIME;
 const maxTimeouts = process.env.MAX_TIMEOUTS;
 
-if (!products || ! products.length) {
+if (!source || ! source.length) {
     throw new Error(`Invalid list provided: ${process.env.LIST}`)
 }
 
 let cicle = 0;
 
 const init = async () => {
+    let products;
+
     console.log(`${new Date()} init`, "\n");
+
+    if (process.env.SHUFFLE_ON_CICLE) {
+        console.log(`shuffling ${source.length} indexes`, "\n");
+        products = functions.shuffle(source);
+    } else {
+        products = source;
+    }
+
     console.time('cicle time');
 
     let maxTimeoutsCounter = 0;
