@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const sleep = require('util').promisify(setTimeout);
 const functions = require("./functions.js");
 
@@ -25,17 +26,21 @@ const init = async () => {
     // for (let i = 0; i < 1; i++) {
         try {
             const product = products[i];
+            const prefix = [
+                `[${("00000" + cicle).slice(cicle.length*-1)}]`,
+                `[${("00000" + i).slice(i.length*-1)}]`
+            ].join('')
 
-            console.time(product);
-            console.log(`${product}: starting`)
+            console.time(`${prefix} ${product}`);
+            console.log(`${prefix} ${product}: starting`)
 
-            const result = await functions.visitProduct(product);
+            const result = await functions.visitProduct(product, prefix);
 
-            console.timeEnd(product);
+            console.timeEnd(`${prefix} ${product}`);
 
-            console.log(`${product}: ${result.status}`);
+            console.log(`${prefix} ${product}: ${result.status}`);
 
-            logResult(result);
+            logResult(result, prefix);
 
             total++;
 
@@ -76,6 +81,7 @@ function logResult(result) {
 
     if (result.status != 'OK') {
         log.push(`\n`);
+        log.push(`${product} `);
         log.push(`${result.product} `);
         log.push(`[${result.status}]`);
         log.push(`[${result.response_status}]`);

@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const timeoutLimit = process.env.TIMEOUT_LIMIT;
 
-exports.visitProduct = product => {
+exports.visitProduct = (product, prefix) => {
     return new Promise(async (resolve, reject) => {
         let browser, page, resolved;
 
@@ -28,7 +28,7 @@ exports.visitProduct = product => {
                     && /post/i.test(request._method)
                     && /"integra"/i.test(request._postData)
                 ) {
-                    console.log(`${product}: integra detected`)
+                    console.log(`${prefix} ${product}: integra detected`)
                     if (! resolved) {
                         resolved = true;
                         setTimeout(() =>
@@ -49,7 +49,7 @@ exports.visitProduct = product => {
             });
 
             if (response.status > 200 && ! resolved) {
-                console.log('response catch', response);
+                // console.log('response catch', response);
                 resolved = true;
                 return resolve({
                     product,
