@@ -1,45 +1,84 @@
 const puppeteer = require('puppeteer');
 const timeoutLimit = process.env.TIMEOUT_LIMIT;
 
-exports.visitProduct = async product => {
-    const browser = await puppeteer.launch();
+exports.visitProduct = product => {
+    return new Promise(async (resolve, reject) => {
+        let browser, page, resolved;
 
-    try {
-        const page = await browser.newPage();
-        await page.setRequestInterception(true);
-        page.on('request', (request) => {
-            if (['image', 'stylesheet', 'font'].indexOf(request.resourceType()) !== -1) {
-                request.abort();
-            } else {
-                request.continue();
-            }
-        });
+        try {
+            browser = await puppeteer.launch();
+            page = await browser.newPage();
+            await page.setRequestInterception(true);
+            await page.setDefaultNavigationTimeout(timeoutLimit);
+            await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36');
 
-        page.setDefaultNavigationTimeout(timeoutLimit);
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36');
+            page.on('request', (request) => {
+                // if already resolved, ignore the rest
+                if (resolved) {
+                    return request.abort();
+                }
 
-        await page.exposeFunction('onCustomEvent', e => {
-            // console.log(`${e.type} fired`, e || '');
-        });
+                // ignore heavy load requests
+                if (['image', 'stylesheet', 'font'].indexOf(request.resourceType()) !== -1) {
+                    return request.abort();
+                }
 
-        function listenFor(type) {
-            return page.evaluateOnNewDocument(type => {
-                document.addEventListener(type, e => {
-                    window.onCustomEvent({ type, detail: e.detail });
+                if (
+                    /usebeon\.io.*event/i.test(request._url)
+                    && /post/i.test(request._method)
+                    && /"integra"/i.test(request._postData)
+                ) {
+                    console.log(`${product}: integra detected`)
+                    if (! resolved) {
+                        resolved = true;
+                        setTimeout(() =>
+                            resolve({
+                                product,
+                                response_status: 200,
+                                status: 'OK'
+                            }), 1000);
+                    }
+                }
+
+                return request.continue();
+            });
+
+
+            response = await page.goto(`${product}`, {
+                waitUntil: 'networkidle0'
+            });
+
+            if (response.status > 200 && ! resolved) {
+                console.log('response catch', response);
+                resolved = true;
+                return resolve({
+                    product,
+                    response_status: response.status,
+                    status: 'ER'
                 });
-            }, type);
+            }
+
+        } catch (error) {
+            console.log(error);
+            return resolve({
+                product,
+                response_status: 500,
+                response_message: error,
+                status: 'ER'
+            });
+
+        } finally {
+            await browser.close();
+
+            if (! resolved) {
+                resolved = true;
+                return resolve({
+                    product,
+                    response_status: 0,
+                    response_message: 'Browser closed, not sure if integra catched.',
+                    status: 'ER'
+                });
+            }
         }
-
-        await listenFor('beon.integra.done');
-        const response = await page.goto(`${product}`);
-        console.log(`url: ${product}, status: ${response._status}`);
-
-        return true;
-    } catch (error) {
-        console.log(`url: ${product}, status: ${error}`);
-        return false;
-    }finally{
-        await browser.close();
-    }
-
+    });
 };
