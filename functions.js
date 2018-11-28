@@ -48,7 +48,7 @@ exports.visitProduct = (product, prefix) => {
                 waitUntil: 'networkidle0'
             });
 
-            if (response.status > 200 && ! resolved) {
+            if (response && response.status > 200 && ! resolved) {
                 // console.log('response catch', response);
                 resolved = true;
                 return resolve({

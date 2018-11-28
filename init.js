@@ -37,8 +37,9 @@ const init = async () => {
         try {
             const product = products[i];
             const prefix = [
-                `[${("00000" + cicle).slice(cicle.length*-1)}]`,
-                `[${("00000" + i).slice(i.length*-1)}]`
+                `[${new Date().toISOString().slice(0,19)}]`,
+                `[${("00000" + cicle).slice(cicle.length-1)}]`,
+                `[${("00000" + i).slice(i.length-1)}]`
             ].join('')
 
             console.time(`${prefix} ${product}`);
@@ -63,7 +64,6 @@ const init = async () => {
 
             if(maxTimeoutsCounter > maxTimeouts){
                 console.log('timeouts counter exceeded. Sleeping...');
-                cicle++;
                 break;
             }
         } catch (error) {
@@ -72,6 +72,8 @@ const init = async () => {
             continue;
         }
     }
+
+    cicle++;
 
     console.log("\n\n");
 
