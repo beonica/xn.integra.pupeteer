@@ -68,7 +68,7 @@ const init = async () => {
             }
         } catch (error) {
             console.log(error);
-            console.log(`ignoring ${product} due error listed above`);
+            console.log(`ignoring record due error listed above`);
             continue;
         }
     }

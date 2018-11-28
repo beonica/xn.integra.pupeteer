@@ -68,7 +68,8 @@ exports.visitProduct = (product, prefix) => {
             });
 
         } finally {
-            await browser.close();
+            if (browser)
+                await browser.close();
 
             if (! resolved) {
                 resolved = true;
